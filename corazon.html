@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El corazón · Mi Salud AR</title>
+  <meta name="description" content="Conoce cómo funciona tu corazón, calcula tus zonas de frecuencia cardiaca y aprende a tomar tu pulso, con datos verificados de fuentes de salud oficiales." />
+  <meta property="og:title" content="El corazón · Mi Salud AR" />
+  <meta property="og:description" content="Datos verificados, calculadora de frecuencia cardiaca y guía para tomar tu pulso." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body data-organo="corazon">
+  <!-- ======================= NAVEGACION ======================= -->
+  <header class="barra-nav">
+    <div class="contenedor">
+      <a class="marca-nav" href="index.html">
+        <svg class="icono-marca" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 21s-7.5-4.6-10-9.3C.4 8.1 2.2 4.5 5.8 4c2-.3 3.8.6 5 2.2C12 4.6 13.8 3.7 15.8 4c3.6.5 5.4 4.1 3.8 7.7C19.5 16.4 12 21 12 21z" fill="currentColor" />
+        </svg>
+        <span>Mi Salud AR</span>
+      </a>
+      <button class="boton-menu" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegacion">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav id="menu-principal" aria-label="Navegacion principal">
+        <ul class="menu-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="corazon.html" aria-current="page">Corazon</a></li>
+          <li><a href="pulmones.html">Pulmones</a></li>
+          <li><a href="cerebro.html">Cerebro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <div class="contenedor texto-centrado">
+        <span class="hero-etiqueta">
+          <svg class="icono-marca" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:18px;height:18px;">
+            <path d="M12 21s-7.5-4.6-10-9.3C.4 8.1 2.2 4.5 5.8 4c2-.3 3.8.6 5 2.2C12 4.6 13.8 3.7 15.8 4c3.6.5 5.4 4.1 3.8 7.7C19.5 16.4 12 21 12 21z" fill="currentColor" />
+          </svg>
+          Dato verificado
+        </span>
+        <p class="hero-dato">189,289</p>
+        <p class="hero-frase">
+          personas murieron por enfermedades del corazón en México durante 2023: la primera causa de muerte en el país.<a class="cita" href="#fuente-1">[1]</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= CONOCE TU CORAZON ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Conoce tu corazón</h2>
+        <p class="seccion-intro">Datos verificados sobre su anatomía y por qué cuidarlo importa.</p>
+        <div class="cuadricula-tarjetas dos-columnas">
+          <article class="tarjeta al-hacer-scroll">
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="4" y="4" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6" />
+              <rect x="13" y="4" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6" />
+              <rect x="4" y="13" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6" />
+              <rect x="13" y="13" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <h3>Cuatro cámaras</h3>
+            <p>Tu corazón tiene dos cámaras superiores (aurículas) que reciben la sangre y dos inferiores (ventrículos) que la bombean hacia el cuerpo.<a class="cita" href="#fuente-2">[2]</a></p>
+          </article>
+
+          <article class="tarjeta al-hacer-scroll">
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 12h4l2-6 2 12 2-6h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h3>Válvulas que marcan el camino</h3>
+            <p>Entre las cámaras hay válvulas cardíacas que se abren y cierran para que la sangre fluya siempre en la dirección correcta.<a class="cita" href="#fuente-2">[2]</a></p>
+          </article>
+
+          <article class="tarjeta al-hacer-scroll">
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" />
+              <path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            <h3>Mito vs. realidad</h3>
+            <p><strong>Mito:</strong> solo afecta a hombres mayores. <strong>Realidad:</strong> en México muere una mujer cada 5 minutos por una enfermedad del corazón, aunque el 80% de los casos se puede prevenir.<a class="cita" href="#fuente-3">[3]</a></p>
+          </article>
+
+          <article class="tarjeta al-hacer-scroll">
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 12h4l3 7 4-14 3 7h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h3>Un problema mundial</h3>
+            <p>Las enfermedades cardiovasculares son la principal causa de muerte en el mundo, con 17.9 millones de muertes al año.<a class="cita" href="#fuente-4">[4]</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SECCION INTERACTIVA ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Pon a prueba tu ritmo</h2>
+        <p class="seccion-intro">Todo se calcula en tu propio celular. No se guarda ni se envía ningún dato.</p>
+
+        <div class="caja-interactiva al-hacer-scroll">
+          <div class="texto-centrado" style="margin-bottom:1rem;">
+            <svg id="icono-latido" class="hero-icono animar-latido" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin:0 auto;">
+              <title>Corazón latiendo</title>
+              <path d="M12 21s-7.5-4.6-10-9.3C.4 8.1 2.2 4.5 5.8 4c2-.3 3.8.6 5 2.2C12 4.6 13.8 3.7 15.8 4c3.6.5 5.4 4.1 3.8 7.7C19.5 16.4 12 21 12 21z" fill="currentColor" />
+            </svg>
+          </div>
+
+          <h3>Calculadora de frecuencia cardiaca</h3>
+          <p>
+            Tu frecuencia cardiaca máxima estimada se calcula como 220 menos tu edad. A partir de ahí, la
+            American Heart Association define zonas de entrenamiento: moderada (50%-70%) y vigorosa (70%-85%)
+            de esa frecuencia máxima.<a class="cita" href="#fuente-6">[6]</a>
+            Esto es solo una <strong>estimación</strong>, no un diagnóstico.
+          </p>
+
+          <div class="campo">
+            <label for="campo-edad">Tu edad (años)</label>
+            <input type="number" id="campo-edad" min="5" max="110" placeholder="Ej. 20" inputmode="numeric" />
+          </div>
+          <button class="boton" id="boton-calcular" type="button">Calcular mis zonas</button>
+
+          <div id="resultado-fc" hidden style="margin-top:1.5rem;">
+            <p class="texto-centrado" style="font-size:1.1rem;">
+              Frecuencia cardiaca máxima estimada: <strong id="valor-fcmax">--</strong> lpm
+            </p>
+
+            <div id="medidor-fc" style="display:flex; flex-direction:column; gap:0.5rem; margin-top:1rem;" aria-hidden="true">
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <span style="width:90px; font-size:0.85rem; font-weight:700;">Moderada</span>
+                <div style="flex:1; height:16px; border-radius:8px; background:var(--color-primario-suave); overflow:hidden;">
+                  <div style="width:70%; height:100%; background:var(--color-primario); opacity:0.6;"></div>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <span style="width:90px; font-size:0.85rem; font-weight:700;">Vigorosa</span>
+                <div style="flex:1; height:16px; border-radius:8px; background:var(--color-primario-suave); overflow:hidden;">
+                  <div style="width:85%; height:100%; background:var(--color-primario);"></div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="lista-check" style="margin-top:1rem;">
+              <li>
+                <svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Zona moderada (50%-70%): entre <strong id="valor-moderada">--</strong> lpm</span>
+              </li>
+              <li>
+                <svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Zona vigorosa (70%-85%): entre <strong id="valor-vigorosa">--</strong> lpm</span>
+              </li>
+            </ul>
+            <p style="font-size:0.85rem; color:var(--color-texto-suave);">
+              Recuerda: esto es una guía general basada en promedios por edad, no una medición clínica.<a class="cita" href="#fuente-6">[6]</a>
+            </p>
+          </div>
+
+          <div class="separador-vertical"></div>
+
+          <h3>Mide tu pulso</h3>
+          <p>
+            Coloca los dedos índice y medio sobre la parte interna de tu muñeca, justo debajo de la base del
+            pulgar, y presiona ligeramente hasta sentir el pulso (también puedes hacerlo a un lado del cuello,
+            nunca de los dos lados a la vez).<a class="cita" href="#fuente-5">[5]</a><a class="cita" href="#fuente-6">[6]</a>
+          </p>
+          <p>
+            Cuando lo sientas, presiona el botón y seguirás el ritmo durante 15 segundos tocando la pantalla
+            con cada latido que sientas en tu muñeca o cuello.
+          </p>
+
+          <button class="boton boton-secundario" id="boton-iniciar-pulso" type="button">Iniciar conteo de 15 segundos</button>
+          <button class="boton" id="boton-toque-pulso" type="button" hidden style="width:100%; margin-top:0.75rem;">
+            Toca aquí con cada latido (<span id="segundos-restantes">15</span>s)
+          </button>
+          <p id="resultado-pulso" class="texto-centrado" style="font-weight:700; font-size:1.2rem; margin-top:1rem;" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= QUE PUEDO HACER ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">¿Qué puedo hacer?</h2>
+        <p class="seccion-intro">Recomendaciones verificadas para cuidar tu corazón.</p>
+        <ul class="lista-check">
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Realiza actividad física, al menos 150 minutos a la semana.<a class="cita" href="#fuente-7">[7]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mantén una alimentación balanceada, baja en grasas saturadas y sodio.<a class="cita" href="#fuente-7">[7]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Evita el consumo de tabaco.<a class="cita" href="#fuente-7">[7]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Limita el consumo de alcohol.<a class="cita" href="#fuente-7">[7]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Controla la hipertensión, la diabetes y el colesterol.<a class="cita" href="#fuente-7">[7]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hazte chequeos médicos periódicos, especialmente a partir de los 40 años.<a class="cita" href="#fuente-7">[7]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Maneja adecuadamente el estrés.<a class="cita" href="#fuente-7">[7]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Practica algún deporte, controla tu glucosa y mantén tu presión arterial en niveles saludables.<a class="cita" href="#fuente-4">[4]</a></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= AVISO MEDICO ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="aviso-medico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 9v4m0 4h.01M10.3 3.9 2.7 17.1c-.6 1 .1 2.4 1.3 2.4h16c1.2 0 1.9-1.4 1.3-2.4L13.7 3.9c-.6-1.1-2.1-1.1-2.7 0z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          </svg>
+          <p>Contenido educativo. No sustituye la consulta médica ni es un diagnóstico.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FUENTES ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Fuentes y referencias</h2>
+        <ol class="lista-fuentes">
+          <li id="fuente-1">INEGI. (2024). <em>Estadísticas de Defunciones Registradas (EDR) 2023 (preliminar)</em>, Comunicado de prensa núm. 478/24. <a href="https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2024/EDR/EDR2023_ene-dic.pdf" target="_blank" rel="noopener">inegi.org.mx</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-2">National Heart, Lung, and Blood Institute (NIH). (s.f.). <em>Cómo funciona el corazón</em>. <a href="https://www.nhlbi.nih.gov/es/salud/corazon/anatomia" target="_blank" rel="noopener">nhlbi.nih.gov</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-3">IMSS. (2023). <em>Boletín de prensa No. 300/2023</em>. <a href="https://www.imss.gob.mx/sites/all/statics/i2f_news/IMSS.%20Bolet%C3%ADn.%20300.docx" target="_blank" rel="noopener">imss.gob.mx</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-4">Secretaría de Salud. (s.f.). <em>Salud del Corazón</em> (infografía, Día Mundial del Corazón). <a href="https://www.gob.mx/cms/uploads/attachment/file/667910/salud_del_corazon.pdf" target="_blank" rel="noopener">gob.mx</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-5">MedlinePlus (Biblioteca Nacional de Medicina de EE. UU., NIH). (s.f.). <em>Cómo tomarse el pulso</em>. <a href="https://medlineplus.gov/spanish/ency/article/003399.htm" target="_blank" rel="noopener">medlineplus.gov</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-6">American Heart Association. (2024). <em>Tabla de frecuencia cardíaca objetivo</em>. <a href="https://www.heart.org/es/healthy-living/exercise-and-physical-activity/fitness-basics/target-heart-rates" target="_blank" rel="noopener">heart.org</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-7">IMSS. (s.f.). <em>Boletín de prensa No. 485</em>. <a href="https://www.imss.gob.mx/sites/all/statics/i2f_news/IMSS.%20Bolet%C3%ADn.%20485.pdf" target="_blank" rel="noopener">imss.gob.mx</a>. Consultado el 08/10/2026.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <p>Proyecto académico de realidad aumentada · Universidad La Salle Oaxaca</p>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+  <script src="js/corazon.js"></script>
+</body>
+</html>

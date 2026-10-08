@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Salud AR · Explora tu cuerpo en realidad aumentada</title>
+  <meta name="description" content="Mi Salud AR es un proyecto educativo de realidad aumentada que te invita a conocer el corazon, los pulmones y el cerebro con datos verificados y actividades interactivas." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mi Salud AR" />
+  <meta property="og:description" content="Proyecto educativo de realidad aumentada: conoce tu corazon, tus pulmones y tu cerebro." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <!-- ======================= NAVEGACION ======================= -->
+  <header class="barra-nav">
+    <div class="contenedor">
+      <a class="marca-nav" href="index.html">
+        <svg class="icono-marca" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 21s-7.5-4.6-10-9.3C.4 8.1 2.2 4.5 5.8 4c2-.3 3.8.6 5 2.2C12 4.6 13.8 3.7 15.8 4c3.6.5 5.4 4.1 3.8 7.7C19.5 16.4 12 21 12 21z"
+            fill="currentColor" />
+        </svg>
+        <span>Mi Salud AR</span>
+      </a>
+      <button class="boton-menu" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegacion">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav id="menu-principal" aria-label="Navegacion principal">
+        <ul class="menu-nav">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="corazon.html">Corazon</a></li>
+          <li><a href="pulmones.html">Pulmones</a></li>
+          <li><a href="cerebro.html">Cerebro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= PORTADA ======================= -->
+  <main id="contenido">
+    <section class="hero">
+      <div class="contenedor texto-centrado">
+        <h1 class="seccion-titulo" style="font-size:1.8rem;">Conoce tu cuerpo con realidad aumentada</h1>
+        <p class="seccion-intro">
+          Este sitio acompaña un prototipo de realidad aumentada creado para la materia de
+          Ingenieria de Software de la Universidad La Salle Oaxaca. Al enfocar cada organo
+          en la app, se abre esta pagina con explicaciones, actividades interactivas y
+          recomendaciones basadas en fuentes de salud confiables.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo texto-centrado">Elige un organo para explorar</h2>
+        <div class="tarjetas-organos">
+          <a class="tarjeta-organo organo-corazon al-hacer-scroll" href="corazon.html">
+            <svg class="icono-organo" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <title>Corazon</title>
+              <path d="M12 21s-7.5-4.6-10-9.3C.4 8.1 2.2 4.5 5.8 4c2-.3 3.8.6 5 2.2C12 4.6 13.8 3.7 15.8 4c3.6.5 5.4 4.1 3.8 7.7C19.5 16.4 12 21 12 21z" fill="currentColor" />
+            </svg>
+            <h2>Corazon</h2>
+            <p>Calculadora de frecuencia cardiaca y guia para tomar tu pulso.</p>
+          </a>
+
+          <a class="tarjeta-organo organo-pulmones al-hacer-scroll" href="pulmones.html">
+            <svg class="icono-organo" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <title>Pulmones</title>
+              <path d="M12 3v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              <path d="M11 9C9.5 7 6 6.2 4.5 7.6 2.8 9.2 2.6 14 4 17.5c.8 2 2.7 3 4.2 2 1.4-.9 1.8-2.6 1.8-4.3V9z" fill="currentColor" />
+              <path d="M13 9c1.5-2 5-2.8 6.5-1.4 1.7 1.6 1.9 6.4.5 9.9-.8 2-2.7 3-4.2 2-1.4-.9-1.8-2.6-1.8-4.3V9z" fill="currentColor" />
+            </svg>
+            <h2>Pulmones</h2>
+            <p>Cuestionario de habitos respiratorios y ejercicio de respiracion guiada.</p>
+          </a>
+
+          <a class="tarjeta-organo organo-cerebro al-hacer-scroll" href="cerebro.html">
+            <svg class="icono-organo" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <title>Cerebro</title>
+              <path d="M9 4.5c-2.2 0-3.6 1.6-3.6 3.3 0 .5.1 1 .3 1.4C4.5 9.8 3.7 11 3.7 12.5c0 1.3.6 2.4 1.6 3.1-.2.5-.3 1-.3 1.6 0 2 1.6 3.3 3.5 3.3.5 0 1-.1 1.4-.3.4.6 1.1 1 2.1 1V5.3C11.3 4.8 10.2 4.5 9 4.5z" fill="currentColor" />
+              <path d="M15 4.5c2.2 0 3.6 1.6 3.6 3.3 0 .5-.1 1-.3 1.4 1.2.6 2 1.8 2 3.3 0 1.3-.6 2.4-1.6 3.1.2.5.3 1 .3 1.6 0 2-1.6 3.3-3.5 3.3-.5 0-1-.1-1.4-.3-.4.6-1.1 1-2.1 1V5.3c.7-.5 1.8-.8 3-.8z" fill="currentColor" />
+            </svg>
+            <h2>Cerebro</h2>
+            <p>Juego de memoria y habitos que cuidan tu mente.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="aviso-medico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 9v4m0 4h.01M10.3 3.9 2.7 17.1c-.6 1 .1 2.4 1.3 2.4h16c1.2 0 1.9-1.4 1.3-2.4L13.7 3.9c-.6-1.1-2.1-1.1-2.7 0z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          </svg>
+          <p>
+            Contenido educativo elaborado para un proyecto academico de realidad aumentada.
+            No sustituye la consulta medica ni es un diagnostico.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= PIE DE PAGINA ======================= -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <p>Proyecto académico de realidad aumentada · Universidad La Salle Oaxaca</p>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+</body>
+</html>

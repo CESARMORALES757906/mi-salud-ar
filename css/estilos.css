@@ -1,0 +1,572 @@
+/* ============================================================
+   Mi Salud AR - Estilos compartidos
+   Mobile-first. Variables de color por organo. Pensado para
+   pantallas pequenas (el sitio se abre desde una app de RA en celular).
+   ============================================================ */
+
+:root {
+  /* Colores de identidad por organo */
+  --color-corazon: #E63946;
+  --color-corazon-suave: #FCE4E6;
+  --color-pulmones: #2A9DB8;
+  --color-pulmones-suave: #E1F3F6;
+  --color-cerebro: #7B5EA7;
+  --color-cerebro-suave: #ECE6F5;
+
+  /* Paleta general */
+  --color-texto: #1F2430;
+  --color-texto-suave: #4A5063;
+  --color-fondo: #F7F8FA;
+  --color-tarjeta: #FFFFFF;
+  --color-borde: #E4E6EC;
+  --color-exito: #2E8B57;
+  --color-alerta: #B45309;
+
+  /* Tema activo (se sobreescribe por pagina con data-organo) */
+  --color-primario: var(--color-corazon);
+  --color-primario-suave: var(--color-corazon-suave);
+
+  --sombra-suave: 0 4px 16px rgba(31, 36, 48, 0.08);
+  --sombra-media: 0 8px 24px rgba(31, 36, 48, 0.12);
+  --radio-tarjeta: 18px;
+  --radio-boton: 14px;
+  --espacio: 1rem;
+  --ancho-max: 720px;
+
+  --fuente-principal: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Tema por organo: se activa poniendo data-organo="corazon|pulmones|cerebro" en <body> */
+body[data-organo="corazon"] {
+  --color-primario: var(--color-corazon);
+  --color-primario-suave: var(--color-corazon-suave);
+}
+body[data-organo="pulmones"] {
+  --color-primario: var(--color-pulmones);
+  --color-primario-suave: var(--color-pulmones-suave);
+}
+body[data-organo="cerebro"] {
+  --color-primario: var(--color-cerebro);
+  --color-primario-suave: var(--color-cerebro-suave);
+}
+
+/* Reinicio basico */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* El atributo hidden debe ganar siempre, incluso sobre .boton (display:inline-flex) */
+[hidden] {
+  display: none !important;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 var(--espacio);
+}
+
+/* ---------------- Barra de navegacion ---------------- */
+.barra-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-tarjeta);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.barra-nav .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.marca-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.marca-nav .icono-marca {
+  width: 28px;
+  height: 28px;
+  color: var(--color-primario);
+}
+
+.boton-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-texto);
+}
+
+.boton-menu svg {
+  width: 26px;
+  height: 26px;
+}
+
+.menu-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1rem 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-top: 1px solid var(--color-borde);
+}
+
+.menu-nav.abierto {
+  display: flex;
+}
+
+.menu-nav a {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  min-height: 44px;
+  text-decoration: none;
+  color: var(--color-texto);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.menu-nav a[aria-current="page"] {
+  color: var(--color-primario);
+  background: var(--color-primario-suave);
+}
+
+.menu-nav a:hover {
+  background: var(--color-fondo);
+}
+
+@media (min-width: 720px) {
+  .boton-menu {
+    display: none;
+  }
+  .menu-nav {
+    display: flex !important;
+    flex-direction: row;
+    border-top: none;
+    padding: 0;
+    gap: 0.5rem;
+  }
+  .menu-nav a {
+    padding: 0.6rem 0.9rem;
+  }
+}
+
+/* ---------------- Secciones generales ---------------- */
+.seccion {
+  padding: 2.5rem 0;
+}
+
+.seccion-titulo {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: var(--color-texto);
+}
+
+.seccion-intro {
+  color: var(--color-texto-suave);
+  margin: 0 0 1.5rem;
+}
+
+/* ---------------- Hero ---------------- */
+.hero {
+  padding: 2.5rem 0 2rem;
+  background: linear-gradient(180deg, var(--color-primario-suave) 0%, var(--color-fondo) 100%);
+}
+
+.hero-dato {
+  font-size: clamp(3rem, 18vw, 4.5rem);
+  font-weight: 800;
+  color: var(--color-primario);
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+
+.hero-frase {
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  margin: 0 0 0.5rem;
+}
+
+.hero-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-tarjeta);
+  color: var(--color-primario);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  box-shadow: var(--sombra-suave);
+}
+
+.hero-icono {
+  width: 64px;
+  height: 64px;
+  color: var(--color-primario);
+}
+
+.cita {
+  font-size: 0.75rem;
+  color: var(--color-texto-suave);
+  text-decoration: none;
+  vertical-align: super;
+  font-weight: 700;
+}
+
+.cita:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- Tarjetas ---------------- */
+.cuadricula-tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 560px) {
+  .cuadricula-tarjetas.dos-columnas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tarjeta {
+  background: var(--color-tarjeta);
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-suave);
+  padding: 1.25rem;
+  border: 1px solid var(--color-borde);
+}
+
+.tarjeta-icono {
+  width: 40px;
+  height: 40px;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.tarjeta p {
+  margin: 0;
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+}
+
+/* Animacion de aparicion al hacer scroll */
+.al-hacer-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.al-hacer-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .al-hacer-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------------- Botones ---------------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radio-boton);
+  border: none;
+  background: var(--color-primario);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.boton:hover {
+  filter: brightness(0.92);
+}
+
+.boton-secundario {
+  background: var(--color-primario-suave);
+  color: var(--color-primario);
+}
+
+.boton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  font-weight: 600;
+}
+
+.campo input[type="number"],
+.campo input[type="range"] {
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-borde);
+  font-size: 1rem;
+}
+
+/* ---------------- Caja interactiva ---------------- */
+.caja-interactiva {
+  background: var(--color-tarjeta);
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-media);
+  padding: 1.5rem;
+  border: 1px solid var(--color-borde);
+}
+
+/* ---------------- Checklist de recomendaciones ---------------- */
+.lista-check {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lista-check li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+  padding: 0.9rem 1rem;
+  box-shadow: var(--sombra-suave);
+}
+
+.lista-check .icono-check {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--color-primario);
+}
+
+/* ---------------- Aviso medico ---------------- */
+.aviso-medico {
+  background: #FFF7ED;
+  border: 1px solid #FDBA74;
+  color: #7C2D12;
+  border-radius: var(--radio-tarjeta);
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.aviso-medico svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--color-alerta);
+}
+
+/* ---------------- Fuentes y referencias ---------------- */
+.lista-fuentes {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: fuente;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.lista-fuentes li {
+  counter-increment: fuente;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.lista-fuentes li::before {
+  content: "[" counter(fuente) "]";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+.lista-fuentes a {
+  word-break: break-word;
+}
+
+/* ---------------- Pie de pagina ---------------- */
+.pie-pagina {
+  background: var(--color-texto);
+  color: #fff;
+  padding: 1.75rem 0;
+  margin-top: 2rem;
+}
+
+.pie-pagina .contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.pie-pagina a {
+  color: #fff;
+}
+
+/* ---------------- Tarjetas de inicio (index) ---------------- */
+.tarjetas-organos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .tarjetas-organos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tarjeta-organo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  background: var(--color-tarjeta);
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-suave);
+  padding: 1.75rem 1.25rem;
+  text-decoration: none;
+  color: var(--color-texto);
+  border: 1px solid var(--color-borde);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-organo:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-media);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta-organo:hover {
+    transform: none;
+  }
+}
+
+.tarjeta-organo .icono-organo {
+  width: 72px;
+  height: 72px;
+}
+
+.tarjeta-organo.organo-corazon .icono-organo { color: var(--color-corazon); }
+.tarjeta-organo.organo-pulmones .icono-organo { color: var(--color-pulmones); }
+.tarjeta-organo.organo-cerebro .icono-organo { color: var(--color-cerebro); }
+
+.tarjeta-organo h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.tarjeta-organo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+
+/* ---------------- Animacion de latido ---------------- */
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.18); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.12); }
+  60% { transform: scale(1); }
+}
+
+.animar-latido {
+  animation: latido 1.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animar-latido {
+    animation: none;
+  }
+}
+
+/* ---------------- Utilidades ---------------- */
+.texto-centrado { text-align: center; }
+.separador-vertical { height: 1px; background: var(--color-borde); margin: 2rem 0; }
+.oculto-visualmente {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El cerebro · Mi Salud AR</title>
+  <meta name="description" content="Conoce cómo funciona tu cerebro, pon a prueba tu memoria con un juego educativo y descubre hábitos verificados que cuidan tu mente." />
+  <meta property="og:title" content="El cerebro · Mi Salud AR" />
+  <meta property="og:description" content="Juego de memoria y hábitos que cuidan tu cerebro, con datos verificados." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body data-organo="cerebro">
+  <!-- ======================= NAVEGACION ======================= -->
+  <header class="barra-nav">
+    <div class="contenedor">
+      <a class="marca-nav" href="index.html">
+        <svg class="icono-marca" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 21s-7.5-4.6-10-9.3C.4 8.1 2.2 4.5 5.8 4c2-.3 3.8.6 5 2.2C12 4.6 13.8 3.7 15.8 4c3.6.5 5.4 4.1 3.8 7.7C19.5 16.4 12 21 12 21z" fill="currentColor" />
+        </svg>
+        <span>Mi Salud AR</span>
+      </a>
+      <button class="boton-menu" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegacion">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav id="menu-principal" aria-label="Navegacion principal">
+        <ul class="menu-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="corazon.html">Corazon</a></li>
+          <li><a href="pulmones.html">Pulmones</a></li>
+          <li><a href="cerebro.html" aria-current="page">Cerebro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <div class="contenedor texto-centrado">
+        <span class="hero-etiqueta">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:18px;height:18px;">
+            <path d="M9 4.5c-2.2 0-3.6 1.6-3.6 3.3 0 .5.1 1 .3 1.4C4.5 9.8 3.7 11 3.7 12.5c0 1.3.6 2.4 1.6 3.1-.2.5-.3 1-.3 1.6 0 2 1.6 3.3 3.5 3.3.5 0 1-.1 1.4-.3.4.6 1.1 1 2.1 1V5.3C11.3 4.8 10.2 4.5 9 4.5z" fill="currentColor" />
+          </svg>
+          Dato verificado
+        </span>
+        <p class="hero-dato">34,784</p>
+        <p class="hero-frase">
+          personas murieron por enfermedades cerebrovasculares en México durante 2024: la 7ª causa de muerte en el país.<a class="cita" href="#fuente-1">[1]</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= CONOCE TU CEREBRO ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Conoce tu cerebro</h2>
+        <p class="seccion-intro">Datos verificados sobre su función y las enfermedades que pueden afectarlo.</p>
+        <div class="cuadricula-tarjetas dos-columnas">
+          <article class="tarjeta al-hacer-scroll">
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 4.5c-2.2 0-3.6 1.6-3.6 3.3 0 .5.1 1 .3 1.4C4.5 9.8 3.7 11 3.7 12.5c0 1.3.6 2.4 1.6 3.1-.2.5-.3 1-.3 1.6 0 2 1.6 3.3 3.5 3.3.5 0 1-.1 1.4-.3.4.6 1.1 1 2.1 1V5.3C11.3 4.8 10.2 4.5 9 4.5z" fill="currentColor" />
+              <path d="M15 4.5c2.2 0 3.6 1.6 3.6 3.3 0 .5-.1 1-.3 1.4 1.2.6 2 1.8 2 3.3 0 1.3-.6 2.4-1.6 3.1.2.5.3 1 .3 1.6 0 2-1.6 3.3-3.5 3.3-.5 0-1-.1-1.4-.3-.4.6-1.1 1-2.1 1V5.3c.7-.5 1.8-.8 3-.8z" fill="currentColor" />
+            </svg>
+            <h3>El director de tu cuerpo</h3>
+            <p>Tu cerebro regula las emociones, la conciencia, el comportamiento y la vida intelectual y emocional.<a class="cita" href="#fuente-2">[2]</a></p>
+          </article>
+
+          <article class="tarjeta al-hacer-scroll">
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" />
+              <path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            <h3>Mito vs. realidad</h3>
+            <p><strong>Mito:</strong> el cerebro deja de desarrollarse en la niñez. <strong>Realidad:</strong> sigue desarrollándose durante la adolescencia y la edad adulta.<a class="cita" href="#fuente-2">[2]</a></p>
+          </article>
+
+          <article class="tarjeta al-hacer-scroll">
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 12h4l2 5 4-10 2 5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h3>¿Qué es un ACV?</h3>
+            <p>Ocurre cuando se detiene el flujo de sangre a una parte del cerebro. 8 de cada 10 son de tipo isquémico, es decir, causados por un coágulo.<a class="cita" href="#fuente-3">[3]</a></p>
+          </article>
+
+          <article class="tarjeta al-hacer-scroll">
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <h3>Tu cerebro con los años</h3>
+            <p>A partir de los 60 años puede haber una reducción normal en la velocidad de pensamiento, pero esto no evita realizar las actividades de la vida diaria.<a class="cita" href="#fuente-2">[2]</a></p>
+          </article>
+
+          <article class="tarjeta al-hacer-scroll">
+            <svg class="tarjeta-icono" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v2M12 19v2M3 12h2M19 12h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <h3>Alzheimer y Parkinson</h3>
+            <p>En México, se estima que el 7.8% de las personas mayores de 65 años vive con Alzheimer. El Parkinson es la segunda enfermedad neurológica más frecuente en el mundo.<a class="cita" href="#fuente-4">[4]</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= JUEGO DE MEMORIA ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Juego de memoria</h2>
+        <p class="seccion-intro">
+          Encuentra los pares. Es un juego educativo, no una prueba clínica de memoria.
+        </p>
+
+        <div class="caja-interactiva al-hacer-scroll">
+          <div style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center; justify-content:space-between; margin-bottom:1rem;">
+            <div role="group" aria-label="Nivel de dificultad" style="display:flex; gap:0.5rem;">
+              <button class="boton boton-secundario" type="button" data-nivel="facil" id="boton-nivel-facil">Fácil (3x4)</button>
+              <button class="boton boton-secundario" type="button" data-nivel="dificil" id="boton-nivel-dificil">Difícil (4x4)</button>
+            </div>
+            <button class="boton" type="button" id="boton-reiniciar-juego">Reiniciar</button>
+          </div>
+
+          <div style="display:flex; gap:1.5rem; justify-content:center; margin-bottom:1rem; font-weight:700;">
+            <span>Movimientos: <span id="contador-movimientos">0</span></span>
+            <span>Tiempo: <span id="contador-tiempo">00:00</span></span>
+          </div>
+
+          <div id="tablero-memoria" style="display:grid; gap:0.6rem;"></div>
+
+          <p id="mensaje-victoria" class="texto-centrado" style="font-weight:700; margin-top:1rem;" aria-live="polite"></p>
+          <p style="font-size:0.85rem; color:var(--color-texto-suave); margin-top:0.5rem;">
+            Mejor marca guardada en este dispositivo: <span id="mejor-marca">--</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= QUE PUEDO HACER ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">¿Qué puedo hacer?</h2>
+        <p class="seccion-intro">Hábitos y recomendaciones verificadas para cuidar tu cerebro.</p>
+        <ul class="lista-check">
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Realiza actividad física regular.<a class="cita" href="#fuente-2">[2]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mantén tu esquema de vacunación al día.<a class="cita" href="#fuente-2">[2]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Evita el consumo de alcohol y tabaco.<a class="cita" href="#fuente-2">[2]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Gestiona adecuadamente el estrés.<a class="cita" href="#fuente-2">[2]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Procura dormir en promedio 8 horas.<a class="cita" href="#fuente-2">[2]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mantén una alimentación balanceada, con poca azúcar y grasas animales.<a class="cita" href="#fuente-2">[2]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hazte revisiones médicas periódicas para controlar hipertensión, diabetes y colesterol.<a class="cita" href="#fuente-2">[2]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>La estimulación cognitiva, la actividad física y la vida social pueden ayudar a prevenir o retrasar hasta un 45% del riesgo de demencia.<a class="cita" href="#fuente-5">[5]</a></span></li>
+          <li><svg class="icono-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprende la señal de alarma de un ACV: cara caída, debilidad en un brazo o habla alterada son motivo para llamar a emergencias de inmediato.<a class="cita" href="#fuente-3">[3]</a></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= AVISO MEDICO ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="aviso-medico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 9v4m0 4h.01M10.3 3.9 2.7 17.1c-.6 1 .1 2.4 1.3 2.4h16c1.2 0 1.9-1.4 1.3-2.4L13.7 3.9c-.6-1.1-2.1-1.1-2.7 0z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          </svg>
+          <p>Contenido educativo. No sustituye la consulta médica ni es un diagnóstico.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FUENTES ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Fuentes y referencias</h2>
+        <ol class="lista-fuentes">
+          <li id="fuente-1">INEGI. (2025). <em>Estadísticas de Defunciones Registradas (EDR) 2024 (preliminar)</em>, Comunicado de prensa núm. 142/25. <a href="https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2025/edr/EDR2024-def_CP.pdf" target="_blank" rel="noopener">inegi.org.mx</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-2">IMSS. (2020). <em>Boletín de prensa No. 496/2020</em>. <a href="https://www.imss.gob.mx/sites/all/statics/i2f_news/IMSS%20Bolet%C3%ADn%20496.pdf" target="_blank" rel="noopener">imss.gob.mx</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-3">MedlinePlus (Biblioteca Nacional de Medicina de EE. UU., NIH). (s.f.). <em>Accidente cerebrovascular</em>. <a href="https://medlineplus.gov/spanish/stroke.html" target="_blank" rel="noopener">medlineplus.gov</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-4">IMSS. (2026). <em>Boletín de prensa No. 130/2026</em>. <a href="https://www.imss.gob.mx/sites/all/statics/i2f_news/IMSS.%20Boletin.%20130_0.pdf" target="_blank" rel="noopener">imss.gob.mx</a>. Consultado el 08/10/2026.</li>
+          <li id="fuente-5">Organización Panamericana de la Salud / OMS. (2026). <em>Nuevas directrices de la OMS: hasta un 45% del riesgo de demencia podría prevenirse o retrasarse</em>. <a href="https://www.paho.org/es/noticias/16-7-2026-nuevas-directrices-oms-hasta-45-riesgo-demencia-podria-prevenirse-retrasarse" target="_blank" rel="noopener">paho.org</a>. Consultado el 08/10/2026.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <p>Proyecto académico de realidad aumentada · Universidad La Salle Oaxaca</p>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+  <script src="js/cerebro.js"></script>
+</body>
+</html>
